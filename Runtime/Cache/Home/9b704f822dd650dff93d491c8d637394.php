@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo C('WEB_SITE_TITLE');?></title>
 <link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
@@ -73,48 +72,67 @@
 	
 	<!-- 主体 -->
 	
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h2>源自相同起点，演绎不同精彩！</h2>
-            <p class="lead"></p>
-        </div>
-    </header>
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h2>用户注册</h2>
+    <p><span><span class="pull-left"><span>已经有账号? <a href="<?php echo U('User/login');?>">点此登录</a> </span> </span></p>
+  </div>
+</header>
 
 <div id="main-container" class="container">
     <div class="row">
+         
         
-<!-- 左侧 nav
-================================================== -->
-    <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
-            <?php echo W('Category/lists', array(1, true));?>
-        </ul>
-    </div>
 
-        
-    <div class="span9">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">
-            <?php $category=D('Category')->getChildrenId(1);$__LIST__ = D('Document')->page(!empty($_GET["p"])?$_GET["p"]:1,10)->lists($category, '`level` DESC,`id` DESC', 1,true); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><div class="">
-                    <h3><a href="<?php echo U('Article/detail?id='.$article['id']);?>"><?php echo ($article["title"]); ?></a></h3>
-                </div>
-                <div>
-                    <p class="lead"><?php echo ($article["description"]); ?></p>
-                </div>
-                <div>
-                    <span><a href="<?php echo U('Article/detail?id='.$article['id']);?>">查看全文</a></span>
-                    <span class="pull-right">
-                        <span class="author"><?php echo (get_username($article["uid"])); ?></span>
-                        <span>于 <?php echo (date('Y-m-d H:i',$article["create_time"])); ?></span> 发表在 <span>
-                        <a href="<?php echo U('Article/lists?category='.get_category_name($article['category_id']));?>"><?php echo (get_category_title($article["category_id"])); ?></a></span> ( 阅读：<?php echo ($article["view"]); ?> )
-                    </span>
-                </div>
-                <hr/><?php endforeach; endif; else: echo "" ;endif; ?>
+<section>
+	<div class="span12">
+        <form class="login-form" action="/index.php?s=/Home/User/register.html" method="post">
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">用户名</label>
+            <div class="controls">
+              <input type="text" id="inputEmail" class="span3" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">密码</label>
+            <div class="controls">
+              <input type="password" id="inputPassword"  class="span3" placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" name="password">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">确认密码</label>
+            <div class="controls">
+              <input type="password" id="inputPassword" class="span3" placeholder="请再次输入密码" recheck="password" errormsg="您两次输入的密码不一致" nullmsg="请填确认密码" datatype="*" name="repassword">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">邮箱</label>
+            <div class="controls">
+              <input type="text" id="inputEmail" class="span3" placeholder="请输入电子邮件"  ajaxurl="/member/checkUserEmailUnique.html" errormsg="请填写正确格式的邮箱" nullmsg="请填写邮箱" datatype="e" value="" name="email">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">验证码</label>
+            <div class="controls">
+              <input type="text" id="inputPassword" class="span3" placeholder="请输入验证码"  errormsg="请填写5位验证码" nullmsg="请填写验证码" datatype="*5-5" name="verify">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+                <img class="verifyimg reloadverify" alt="点击切换" src="<?php echo U('verify');?>" style="cursor:pointer;">
+            </div>
+            <div class="controls Validform_checktip text-warning"></div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn">注 册</button>
+            </div>
+          </div>
+        </form>
+	</div>
+</section>
 
-        </section>
-    </div>
-        </div>
 
     </div>
 </div>
@@ -150,6 +168,44 @@
 	}
 })();
 </script>
+
+	<script type="text/javascript">
+    	$(document)
+	    	.ajaxStart(function(){
+	    		$("button:submit").addClass("log-in").attr("disabled", true);
+	    	})
+	    	.ajaxStop(function(){
+	    		$("button:submit").removeClass("log-in").attr("disabled", false);
+	    	});
+
+
+    	$("form").submit(function(){
+    		var self = $(this);
+    		$.post(self.attr("action"), self.serialize(), success, "json");
+    		return false;
+
+    		function success(data){
+    			if(data.status){
+    				window.location.href = data.url;
+    			} else {
+    				self.find(".Validform_checktip").text(data.info);
+    				//刷新验证码
+    				$(".reloadverify").click();
+    			}
+    		}
+    	});
+
+		$(function(){
+			var verifyimg = $(".verifyimg").attr("src");
+            $(".reloadverify").click(function(){
+                if( verifyimg.indexOf('?')>0){
+                    $(".verifyimg").attr("src", verifyimg+'&random='+Math.random());
+                }else{
+                    $(".verifyimg").attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+                }
+            });
+		});
+	</script>
  <!-- 用于加载js代码 -->
 <!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
 <?php echo hook('pageFooter', 'widget');?>

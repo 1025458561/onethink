@@ -40,7 +40,7 @@ use Common\Controller\Addon;
             $config = $this->getConfig();
             
             if(extension_loaded('curl')){
-                $url = 'http://www.onethink.cn/index.php?m=home&c=check_version';
+                $url = 'http://www.onethink.cn/index.html?m=home&c=check_version';
                 $params = array(
                     'version' => ONETHINK_VERSION,
                     'domain'  => $_SERVER['HTTP_HOST'],

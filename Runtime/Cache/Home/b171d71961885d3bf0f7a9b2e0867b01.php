@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo C('WEB_SITE_TITLE');?></title>
 <link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
@@ -85,7 +86,7 @@
         
 <section>
 	<div class="span12">
-        <form class="login-form" action="/index.php?s=/home/user/login.html" method="post">
+        <form class="login-form" action="/index.php?s=/Home/User/login.html" method="post">
           <div class="control-group">
             <label class="control-label" for="inputEmail">用户名</label>
             <div class="controls">

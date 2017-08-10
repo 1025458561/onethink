@@ -1,0 +1,65 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>
+            {$info['id']?'编辑':'新增'}报修
+            <notempty name="pid">
+                [&nbsp;父导航：<a href="{:U('index','pid='.$pid)}">{$parent.title}</a>&nbsp;]
+            </notempty>
+        </h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <input type="hidden" name="pid" value="{$pid}">
+        <div class="form-item">
+            <label class="item-label">你的名字<span class="check-tips">（用于显示的文字）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="name" value="{$info.name|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">电话号码<span class="check-tips">（请填联系方式）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="tel" value="{$info.tel|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">报修房号<span class="check-tips">（请填写正确地址以便联系）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="housenu" value="{$info.housenu|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">身份证号码<span class="check-tips">（必须填写）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="idnu" value="{$info.idnu|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">你的性别<span class="check-tips">（女士优先）</span></label>
+            <div class="controls">
+                <div class="controls">
+                    <input type="radio" name="sex" value="1" />男
+                    <input type="radio" name="sex" value="2" />女
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">优先级<span class="check-tips">（导航显示顺序）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-small" name="sort" value="{$info.sort|default='0'}">
+            </div>
+        </div>
+        <div class="form-item">
+            <input type="hidden" name="id" value="{$info.id|default=''}">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">提交</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+<block name="script">
+    <script type="text/javascript" charset="utf-8">
+        //导航高亮
+        highlight_subnav('{:U('index')}');
+    </script>
+</block>
