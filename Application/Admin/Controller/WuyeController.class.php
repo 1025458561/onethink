@@ -9,22 +9,22 @@ namespace Admin\Controller;
 
 
 use Admin\Model\BaoxiuModel;
+use Think\Page;
 
 class WuyeController extends AdminController{
     public function index(){
-       // echo 1;exit;
-        $pid = i('get.pid', 0);
-      //  var_dump($pid);exit;
-        /* 获取频道列表 */
-     //   $map  = array('status' => array('gt', -1), 'pid'=>$pid);
-        //M查询相应的表数据
-        $list = M('baoxiu')->select();
-        // var_dump($list);exit;
-        //传输数据assign
+
+       // $pid = i('get.pid', 0);
+
+        $list = M('baoxiu');
+        $count =$list->count();
+       // var_dump($count);exit;
+        $page = new Page($count,1);
+        $show=$page->show();
+        $list = $list->limit($page->firstRow.','.$page->listRows)->select();
+        $this->assign('page',$show);
         $this->assign('list', $list);
-        $this->assign('pid', $pid);
-    //var_dump( $this->assign('list', $list));exit;
-        //展示当前视图
+       // $this->assign('pid', $pid);
         $this->display('index');
     }
 
@@ -55,6 +55,7 @@ class WuyeController extends AdminController{
 
             $data = $baoxiu->create();
             if($data){
+             //   var_dump($baoxiu->save);exit;
                 if($baoxiu->save()){
                     //记录行为
                     //action_log('update_channel', 'channel', $data['id'], UID);
@@ -82,7 +83,7 @@ class WuyeController extends AdminController{
                 }
                 $this->assign('pid', $pid);
                 $this->assign('info', $info);
-                $this->meta_title = '编辑导航';
+
              //   var_dump($info);exit;
                 $this->display('edit');
 

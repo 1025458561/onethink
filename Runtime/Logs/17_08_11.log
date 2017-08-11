@@ -1,0 +1,1264 @@
+[ 2017-08-11T09:58:38+08:00 ] 127.0.0.1 /index.php
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.038002s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `onethink_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.265015s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `onethink_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `create_time` < 1502416714 ) AND ( deadline = 0 OR deadline > 1502416714 ) ORDER BY `id` DESC  [ RunTime:0.100005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_channel` [ RunTime:0.026001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `onethink_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `onethink_category` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `onethink_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.059003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon` FROM `onethink_category` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `onethink_category` WHERE ( `status` = 1 ) ORDER BY sort  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `onethink_document` WHERE ( `status` = 1 ) AND ( `pid` = 0 ) AND ( `category_id` = 2 ) AND ( `create_time` < 1502416714 ) AND ( deadline = 0 OR deadline > 1502416714 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.173010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.167009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.120007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.120007s ]
+
+[ 2017-08-11T09:59:12+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.125007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.126007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:24+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.037002s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `onethink_ucenter_member` SET `last_login_time`=1502416763,`last_login_ip`='2130706433' WHERE ( `id` = 1 ) [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.034002s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.029001s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.033002s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,2130706433,'member',1,1502416763,'admin在2017-08-11 09:59登录了后台') [ RunTime:0.019001s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined offset: 1 F:\Onethink\wwwroot\Application\Common\Common\function.php 第 665 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given F:\Onethink\wwwroot\Application\Common\Common\function.php 第 665 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1502330363 ) LIMIT 1   [ RunTime:0.038002s ]
+SQL: UPDATE `onethink_member` SET `login`=`login`+1,`last_login_time`=1502416763,`last_login_ip`='2130706433' WHERE ( `uid` = 1 ) [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:24+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.031002s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.011000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 1 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 1 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `onethink_addons` [ RunTime:0.034002s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.006001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_member` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_document` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.006001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_category` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_model` [ RunTime:0.020001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_model` LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.159009s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run SiteStat [ RunTime:0.160009s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.415023s ]
+SQL: select version() as v; [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.240013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.273015s ]
+INFO: Run SystemInfo [ RunTime:0.273015s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'DevTeam' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.471026s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.294017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.311018s ]
+INFO: Run DevTeam [ RunTime:0.038003s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.471027s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.294017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.311018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:27+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.095006s ]
+SQL: SELECT * FROM `onethink_baoxiu`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.124007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.124007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:29+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/add/pid/0.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/add%' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 5 行.
+NOTIC: [8] Undefined variable: info F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 90 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 95 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.039003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:32+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/add/pid/0.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/add%' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 5 行.
+NOTIC: [8] Undefined variable: info F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 90 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 95 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:44+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/add%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: INSERT INTO `onethink_baoxiu` (`name`,`tel`,`housenu`,`idnu`,`sex`,`sort`,`id`,`create_time`,`update_time`,`status`) VALUES ('3',3,'3',4,1,0,0,1502416784,1502416784,1) [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:45+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_baoxiu`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T09:59:51+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/add/pid/0.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/add%' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 5 行.
+NOTIC: [8] Undefined variable: info F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 90 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 95 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T10:00:15+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit/id/1/pid/0.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_baoxiu` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T10:00:19+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005001s ]
+NOTIC: [8] Undefined index: sex F:\Onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1125 行.
+
+[ 2017-08-11T10:00:26+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: UPDATE `onethink_baoxiu` SET `name`='小亮1',`tel`=12345678,`housenu`='天府新区2',`idnu`=511322199,`sex`=2,`sort`=1,`update_time`=1502416826,`status`=1 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+
+[ 2017-08-11T10:00:27+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001001s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_baoxiu`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T10:00:37+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/del/id/4.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/del%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: DELETE FROM `onethink_baoxiu` WHERE ( `id` IN ('4') ) [ RunTime:0.001000s ]
+
+[ 2017-08-11T10:00:38+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_baoxiu`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T11:34:37+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.029001s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.131007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.009001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-11T11:34:46+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.058004s ]
+SQL: SELECT * FROM `onethink_ucenter_member` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `onethink_ucenter_member` SET `last_login_time`=1502422486,`last_login_ip`='2130706433' WHERE ( `id` = 1 ) [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.112007s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.039002s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.065004s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,2130706433,'member',1,1502422486,'admin在2017-08-11 11:34登录了后台') [ RunTime:0.020001s ]
+SQL: SELECT * FROM `onethink_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 F:\Onethink\wwwroot\Application\Common\Common\function.php 第 665 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given F:\Onethink\wwwroot\Application\Common\Common\function.php 第 665 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1502336086 ) LIMIT 1   [ RunTime:0.015001s ]
+SQL: UPDATE `onethink_member` SET `login`=`login`+1,`last_login_time`=1502422486,`last_login_ip`='2130706433' WHERE ( `uid` = 1 ) [ RunTime:0.001000s ]
+
+[ 2017-08-11T11:34:47+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.041002s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.009000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.011001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 1 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 1 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `onethink_addons` [ RunTime:0.070004s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.011000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_member` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.010001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.093005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_document` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.045003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_category` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_model` [ RunTime:0.046003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_model` LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.364021s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run SiteStat [ RunTime:0.362020s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.620036s ]
+SQL: select version() as v; [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.060003s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.199012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.258015s ]
+INFO: Run SystemInfo [ RunTime:0.258015s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'DevTeam' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.654038s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.272016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.290017s ]
+INFO: Run DevTeam [ RunTime:0.032002s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.652037s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.272016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.291017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T11:34:49+08:00 ] 127.0.0.1 /index.php?s=/Admin/Addons/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.013001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Addons/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=43 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 43 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 43 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '扩展' ) AND ( `pid` = 43 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`author`,`version`,`create_time`,`has_adminlist` FROM `onethink_addons` WHERE ( `name` IN ('Attachment','DevTeam','Editor','EditorForAdmin','SiteStat','SocialComment','SystemInfo') )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_addons` [ RunTime:0.006000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'Attachment' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SocialComment' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'Editor' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'DevTeam' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'EditorForAdmin' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.105006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T11:34:50+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.114007s ]
+SQL: SELECT * FROM `onethink_baoxiu`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T11:34:55+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit/id/1/pid/0.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `onethink_baoxiu` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\09f60870d75b776428c089a48592e11f.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.091006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-08-11T11:35:01+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.012001s ]
+
+[ 2017-08-11T11:35:33+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.007001s ]
+
+[ 2017-08-11T11:35:44+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.009000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.008001s ]
+
+[ 2017-08-11T11:36:02+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.009000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/edit%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.008001s ]
+SQL: UPDATE `onethink_baoxiu` SET `name`='小亮1222233333',`tel`=12345678,`housenu`='天府新区2',`idnu`=511322199,`sex`=1,`sort`=1,`update_time`=1502422561,`status`=1 WHERE ( `id` = 1 ) [ RunTime:0.001000s ]
+
+[ 2017-08-11T11:36:03+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.007000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.009000s ]
+SQL: SELECT * FROM `onethink_baoxiu`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:01:20+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:05:49+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.006001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-11T14:05:53+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-08-11T14:06:06+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:06:08+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001001s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:06:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:06:10+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:06:11+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:06:12+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:06:13+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.093005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:06:28+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:06:40+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001001s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:06:41+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:06:42+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:07:07+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:07:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001001s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:07:11+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001001s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:07:35+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.007000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 93 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-08-11T14:08:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.007001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.007000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+NOTIC: [8] Trying to get property of non-object F:\Onethink\wwwroot\Application\Admin\Controller\WuyeController.class.php 第 24 行.
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT ,   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `onethink_baoxiu` LIMIT ,  
+
+[ 2017-08-11T14:09:33+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT 1,1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 93 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 126 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:09:35+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001001s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT 0,1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 93 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 126 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-11T14:29:28+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/2.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT 1,1   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 93 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 126 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-11T14:29:29+08:00 ] 127.0.0.1 /index.php?s=/Admin/Wuye/index/p/1.html
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Wuye/index%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=122 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 122 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 122 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 122 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_baoxiu` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_baoxiu` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_baoxiu` LIMIT 0,1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 5 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 93 行.
+NOTIC: [8] Undefined variable: pid F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 126 行.
+NOTIC: [8] Undefined variable: channel F:\Onethink\wwwroot\Runtime\Cache\Admin\2d17eb052ed96879c871982aa9e5f5d2.php 第 127 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

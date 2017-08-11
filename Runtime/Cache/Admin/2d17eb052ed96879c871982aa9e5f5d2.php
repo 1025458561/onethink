@@ -133,6 +133,7 @@
             </tbody>
         </table>
     </div>
+    <div class="page"><?php echo ($page); ?></div>
 
         </div>
         <div class="cont-ft">
