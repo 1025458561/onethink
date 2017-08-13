@@ -30,19 +30,12 @@
             </div>
         </div>
         <div class="form-item">
-            <label class="item-label">身份证号码<span class="check-tips">（必须填写）</span></label>
+            <label class="item-label">详细内容<span class="check-tips">（必须填写）</span></label>
             <div class="controls">
-                <input type="text" class="text input-large" name="idnu" value="{$info.idnu|default=''}">
+               <textarea class="textarea" cols="50" rows="20" name="content" value="{$info.content|default=''}"></textarea>
             </div>
         </div>
-        <div class="form-item">
-            <label class="item-label">你的性别<span class="check-tips">（女士优先）</span></label>
-            <div class="controls">
-                <div class="controls">
-                    <input type="radio" name="sex" value="1" />男
-                    <input type="radio" name="sex" value="2" />女
-                </div>
-            </div>
+
         </div>
         <div class="form-item">
             <label class="item-label">优先级<span class="check-tips">（导航显示顺序）</span></label>

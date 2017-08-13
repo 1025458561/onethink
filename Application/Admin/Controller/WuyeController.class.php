@@ -19,7 +19,7 @@ class WuyeController extends AdminController{
         $list = M('baoxiu');
         $count =$list->count();
        // var_dump($count);exit;
-        $page = new Page($count,1);
+        $page = new Page($count,3);
         $show=$page->show();
         $list = $list->limit($page->firstRow.','.$page->listRows)->select();
         $this->assign('page',$show);

@@ -105,9 +105,9 @@
                 <th>ID</th>
                 <th>名字</th>
                 <th>电话号码</th>
+                <th>房号</th>
+                <th>标题</th>
                 <th>详细地址</th>
-                <th>身份证号码</th>
-                <th>性别</th>
                 <th>状态</th>
                 <th>操作</th>
             </tr>
@@ -119,9 +119,9 @@
                         <td><?php echo ($baoxiu["name"]); ?></td>
                         <td><?php echo ($baoxiu["tel"]); ?></td>
                         <td><?php echo ($baoxiu["housenu"]); ?></td>
-                        <td><?php echo ($baoxiu["idnu"]); ?></td>
-                        <td> <?php echo ($baoxiu["sex"]); ?></td>
-                        <td><?php echo ($baoxiu["status"]); ?></td>
+                        <td><?php echo ($baoxiu["title"]); ?></td>
+                        <td> <?php echo ($baoxiu["content"]); ?></td>
+                        <td><?php echo ($baoxiu["[status]<=1?'处理中':'完成'"]); ?></td>
                         <td>
                             <a title="编辑" href="<?php echo U('edit?id='.$baoxiu['id'].'&pid='.$pid);?>">编辑</a>
                             <a href="<?php echo U('setStatus?ids='.$baoxiu['id'].'&status='.abs(1-$baoxiu['status']));?>" class="ajax-get"><?php echo (show_status_op($channel["status"])); ?></a>
